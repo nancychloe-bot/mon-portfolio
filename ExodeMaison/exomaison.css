@@ -1,0 +1,68 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: palevioletred;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.calendrier{
+    width: 320px;
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.3);
+}
+
+.mois{
+    background-color: orangered;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.mois button{
+    background: none;
+    border: none;
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.contenu{
+    text-align: center;
+    padding: 30px;
+}
+
+#nom-jour{
+    color: gray;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+#numero-jour{
+    font-size: 90px;
+    margin-bottom: 20px;
+}
+
+#annee{
+    color: gray;
+    font-size: 25px;
+}
+#choisir-date{
+    width: 200px;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 10px;
+    border: none;
+    font-size: 16px;
+}
