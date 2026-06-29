@@ -1,0 +1,408 @@
+
+:root {
+    --bg-color: #fff6f8;
+    --text-main: #3d2a2d;
+    --primary-pink: #ff8da1;
+    --dark-pink: #d46376;
+    --soft-pink: #ffe0e6;
+    --white: #ffffff;
+    --shadow: rgba(255, 141, 161, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', 'Segoe UI', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1050px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+h2 {
+    font-size: 2.3rem;
+    color: var(--dark-pink);
+    text-align: center;
+    margin-bottom: 3.5rem;
+    position: relative;
+    font-weight: 600;
+}
+
+h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: var(--primary-pink);
+    margin: 0.6rem auto 0;
+    border-radius: 5px;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 8%;
+    background-color: rgba(255, 246, 248, 0.85);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--soft-pink);
+}
+
+.logo {
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: var(--dark-pink);
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: var(--primary-pink);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 2.2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-main);
+    font-weight: 500;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--primary-pink);
+}
+
+
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background: radial-gradient(circle at top right, #ffebee 0%, var(--bg-color) 100%);
+    padding-top: 80px;
+}
+
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    gap: 2rem;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-text h1 {
+    font-size: 3.5rem;
+    color: var(--dark-pink);
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+.hero-text .highlight {
+    color: var(--primary-pink);
+    position: relative;
+}
+
+.subtitle {
+    font-size: 1.3rem;
+    color: #6e5558;
+    margin-bottom: 2.5rem;
+    font-weight: 400;
+}
+
+
+.btn {
+    display: inline-block;
+    padding: 0.85rem 2.2rem;
+    background-color: var(--primary-pink);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    box-shadow: 0 4px 15px var(--shadow);
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: var(--dark-pink);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(212, 99, 118, 0.3);
+}
+
+/* Photo de Profil avec effet miroir/girly chic */
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.profile-img-box {
+    position: relative;
+    width: 380px;  /* On agrandit le cercle (avant c'était 320px) */
+    height: 380px; /* On agrandit le cercle */
+    border-radius: 50%;
+    overflow: hidden;
+    border: 6px solid var(--white);
+    box-shadow: 0 10px 30px rgba(214, 99, 118, 0.15);
+    margin: 0 auto; /* Aligne bien le cercle au centre */
+}
+
+.profile-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 15%; /* Magie : ça remonte le cadrage directement sur ton visage */
+    transform: scale(1.3);       /* Magie : ça zoome un peu dans l'image pour que tu sois plus grande */
+}
+/* Section À Propos */
+.about {
+    padding: 8rem 0;
+    background-color: var(--white);
+}
+
+.intro-text {
+    text-align: center;
+    font-size: 1.25rem;
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    line-height: 1.7;
+}
+
+.filiere-box {
+    background-color: var(--bg-color);
+    padding: 3rem;
+    border-radius: 24px;
+    border-left: 6px solid var(--primary-pink);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.01);
+}
+
+.filiere-box h3 {
+    color: var(--dark-pink);
+    margin-bottom: 1.2rem;
+    font-size: 1.5rem;
+}
+
+.filiere-box p {
+    margin-bottom: 1rem;
+    line-height: 1.7;
+    color: #574144;
+}
+
+.filiere-box p:last-child {
+    margin-bottom: 0;
+}
+
+
+.skills {
+    padding: 8rem 0;
+}
+
+.skills-container {
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.skill-bar {
+    margin-bottom: 2.2rem;
+}
+
+.skill-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.6rem;
+    font-weight: 500;
+    font-size: 1.05rem;
+}
+
+.skill-info i {
+    color: var(--primary-pink);
+    margin-right: 0.4rem;
+}
+
+.bar-line {
+    width: 100%;
+    height: 10px;
+    background-color: var(--soft-pink);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.progress {
+    display: block;
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary-pink), var(--dark-pink));
+    border-radius: 20px;
+    width: 0; /* Animé par le JavaScript */
+    transition: width 1.8s cubic-bezier(0.1, 0.8, 0.3, 1);
+}
+
+/* Qualités & Loisirs */
+.lifestyle {
+    padding: 8rem 0;
+    background-color: var(--white);
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
+}
+
+.card-box {
+    background-color: var(--bg-color);
+    padding: 3rem 2.5rem;
+    border-radius: 24px;
+    transition: transform 0.3s ease;
+}
+
+.card-box:hover {
+    transform: translateY(-5px);
+}
+
+.card-box h3 {
+    color: var(--dark-pink);
+    margin-bottom: 1.8rem;
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.card-box ul {
+    list-style: none;
+}
+
+.card-box ul li {
+    margin-bottom: 1.2rem;
+    line-height: 1.6;
+    font-size: 0.98rem;
+}
+
+.card-box ul li:last-child {
+    margin-bottom: 0;
+}
+
+.traits-list li i {
+    color: var(--primary-pink);
+    margin-right: 0.5rem;
+}
+
+.hobbies-list li i {
+    color: var(--dark-pink);
+    margin-right: 0.5rem;
+}
+
+
+footer {
+    background-color: #2b1b1d;
+    color: #f7ebed;
+    padding: 5rem 0 2rem 0;
+    text-align: center;
+}
+
+footer h3 {
+    font-size: 2.2rem;
+    color: var(--primary-pink);
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+footer p {
+    color: #c4b2b4;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+    margin: 3.5rem 0;
+    font-size: 1.1rem;
+}
+
+.contact-info span {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.contact-info i {
+    color: var(--primary-pink);
+    font-size: 1.2rem;
+}
+
+.footer-bottom {
+    margin-top: 4rem;
+    border-top: 1px solid #422d30;
+    padding-top: 1.8rem;
+    font-size: 0.85rem;
+    color: #948183;
+}
+
+
+@media (max-width: 900px) {
+    .hero-container {
+        flex-direction: column-reverse;
+        text-align: center;
+        justify-content: center;
+        padding-top: 2rem;
+    }
+    .hero-text h1 { font-size: 2.8rem; }
+    .profile-img-box { width: 260px; height: 260px; }
+    .nav-links { display: none; } /* Navigation simplifiée sur mobile */
+}
+
+.project-links a {
+    transition: all 0.3s ease;
+}
+
+
+.project-links a:hover {
+    color: #b54a5c !important; 
+}
+
+
+.project-links a:hover i {
+    transform: translateX(5px);
+    transition: transform 0.3s ease;
+}
+
+.btn {
+    transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+    transform: scale(1.05); /* Grossit très légèrement */
+    background-color: #b94f61; /* Assombrit un peu le rose */
+    box-shadow: 0 6px 20px rgba(214, 99, 118, 0.5); /* Intensifie la lueur */
+}
